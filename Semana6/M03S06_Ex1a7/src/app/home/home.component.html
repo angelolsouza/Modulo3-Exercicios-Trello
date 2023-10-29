@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="carousel-wrapper">
+  <div id="carouselCursos" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-toggle="modal" data-bs-target="#modalAvaliacaoCurso">
+        <img src="assets/curso.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modalAvaliacaoCurso">
+        <img src="assets/curso.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-toggle="modal" data-bs-target="#modalAvaliacaoCurso">
+        <img src="assets/curso.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCursos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCursos" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div class="modal fade" id="modalAvaliacaoCurso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Avaliar Curso</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="avaliacaoForm">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" formControlName="nome">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+          </div>
+          <div class="mb-3">
+            <label for="dtNascimento" class="form-label">Data de nascimento</label>
+            <input type="date" class="form-control" id="dtNascimento" formControlName="dtNascimento">
+          </div>
+          <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea class="form-control" id="feedback" formControlName="feedback"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="nota" class="form-label">Nota</label>
+            <input type="number" class="form-control" id="nota" formControlName="nota" [min]="0" [max]="10">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" (click)="enviarAvaliacao()">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>

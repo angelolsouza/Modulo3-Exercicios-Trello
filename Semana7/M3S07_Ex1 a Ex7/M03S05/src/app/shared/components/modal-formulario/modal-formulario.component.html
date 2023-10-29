@@ -1,0 +1,26 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h6 class="modal-title" id="exampleModalLabel">Avaliar Curso</h6>
+    <button type="button" class="btn-close" (click)="fechar()" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="usuarioForm">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="nome" class="form-control" id="nome" formControlName="nome">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="dtNascimento" class="form-label">Data de nascimento</label>
+        <input type="date" class="form-control" id="dtNascimento" [placeholder]="'DD/MM/YYYY'" formControlName="dtNascimento">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="fechar()">Fechar</button>
+    <button type="button" class="btn btn-primary" (click)="enviar()">Enviar</button>
+  </div>
+</div>

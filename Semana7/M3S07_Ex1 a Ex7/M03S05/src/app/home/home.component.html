@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<app-carousel (openModalFormulario)="openModalFormularioHome()"></app-carousel>
+
+<ng-template #modalFormulario>
+  <app-modal-formulario (closeModal)="closeModalHome()"></app-modal-formulario>
+</ng-template>

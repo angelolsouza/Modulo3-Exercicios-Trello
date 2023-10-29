@@ -1,0 +1,8 @@
+.carousel-wrapper {
+  width: 75%;
+  margin: auto;
+}
+
+.carousel-item > img {
+  height: 50vh;
+}
