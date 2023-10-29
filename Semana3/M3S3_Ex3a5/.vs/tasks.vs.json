@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-M03S02",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "tarefa-Base",
+      "appliesTo": "CadastroTelefonesSln/CadastroTelefonesApi/Base/",
+      "type": "launch"
+    }
+  ]
+}
